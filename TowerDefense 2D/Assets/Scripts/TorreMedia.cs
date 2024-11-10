@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TorreFraca : TorreBase
+public class TorreMedia: TorreBase
 {
     public GameObject prefabMunicao;
 

@@ -8,7 +8,7 @@ public class TorreFraca : TorreBase
 
     protected override bool PodeAtacar(IAtacavel atacavel)
     {
-        return atacavel is InimigoRoxo;
+        return atacavel is InimigoAmarelo || atacavel is InimigoVerde;
     }
 
     public override void Atacar()
@@ -27,3 +27,4 @@ public class TorreFraca : TorreBase
         municao.Iniciar((InimigoBase)alvo, dano);
     }
 }
+

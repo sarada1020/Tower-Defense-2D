@@ -16,19 +16,35 @@ public abstract class InimigoBase : MonoBehaviour, IAtacavel
 
     public void Mover()
     {
+        if (pontosDoCaminho == null || pontosDoCaminho.Count == 0)
+        {
+            Debug.LogWarning("Caminho não configurado no inimigo.");
+            return;
+        }
+
         if (pontoAtual < pontosDoCaminho.Count)
         {
-            transform.position = Vector2.MoveTowards(transform.position, pontosDoCaminho[pontoAtual].position, velocidade * Time.deltaTime);
+            Transform pontoDestino = pontosDoCaminho[pontoAtual];
+            transform.position = Vector2.MoveTowards(transform.position, pontoDestino.position, velocidade * Time.deltaTime);
 
-            if (Vector2.Distance(transform.position, pontosDoCaminho[pontoAtual].position) < 0.1f)
+            Debug.Log($"Inimigo se movendo para o ponto {pontoAtual}");
+
+            if (Vector2.Distance(transform.position, pontoDestino.position) < 0.1f)
             {
                 pontoAtual++;
+                Debug.Log($"Inimigo alcançou o ponto {pontoAtual - 1}");
             }
         }
         else
         {
+            Debug.Log("Inimigo chegou ao final do caminho.");
             ChegarNoFinalDoCaminho();
         }
+    }
+
+    void Update()
+    {
+        Mover();
     }
 
     protected abstract void ChegarNoFinalDoCaminho();

@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TorreFraca : TorreBase
+public class TorreForte : TorreBase
 {
     public GameObject prefabMunicao;
 
     protected override bool PodeAtacar(IAtacavel atacavel)
     {
-        return atacavel is InimigoAmrelo || atacavel is InimigoVerde;
+        return atacavel is InimigoRoxo;
     }
 
     public override void Atacar()
@@ -27,4 +27,3 @@ public class TorreFraca : TorreBase
         municao.Iniciar((InimigoBase)alvo, dano);
     }
 }
-
