@@ -4,22 +4,22 @@ using UnityEngine;
 
 public abstract class TorreBase : MonoBehaviour
 {
-    public float alcance;
-    public int dano;
-    public Transform spawnPonto;
-    public float intervaloDeDisparo = 1.5f;
+    public float alcance; // O alcance da torre
+    public int dano; // Dano causado
+    public Transform spawnPonto; // Ponto de spawn da munição
+    public float intervaloDeDisparo = 1.5f; // Tempo entre disparos
 
-    private float contadorDeDisparo = 0f;
+    private float contadorDeDisparo = 0f; // Contador para o intervalo de disparo
     protected List<IAtacavel> atacaveisNoAlcance = new List<IAtacavel>();
 
     void Update()
     {
-        AtualizarAlvosNoAlcance();
+        AtualizarAlvosNoAlcance(); // Atualiza a lista de alvos dentro do alcance
         contadorDeDisparo -= Time.deltaTime;
 
         if (atacaveisNoAlcance.Count > 0 && contadorDeDisparo <= 0)
         {
-            Atacar();
+            Atacar(); // Realiza o ataque
             contadorDeDisparo = intervaloDeDisparo;
         }
     }
@@ -30,6 +30,7 @@ public abstract class TorreBase : MonoBehaviour
     {
         atacaveisNoAlcance.Clear();
         Collider2D[] alvosDetectados = Physics2D.OverlapCircleAll(transform.position, alcance);
+
         foreach (Collider2D col in alvosDetectados)
         {
             IAtacavel atacavel = col.GetComponent<IAtacavel>();
@@ -41,5 +42,10 @@ public abstract class TorreBase : MonoBehaviour
     }
 
     public abstract void Atacar();
-}
 
+    void OnDrawGizmosSelected() // Para visualizar o alcance no editor
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, alcance);
+    }
+}

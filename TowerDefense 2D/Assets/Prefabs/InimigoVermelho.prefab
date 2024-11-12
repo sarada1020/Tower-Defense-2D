@@ -134,4 +134,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vida: 40
-  velocidade: 1.5
+  velocidade: 2

@@ -8,7 +8,7 @@ public class TorreFraca : TorreBase
 
     protected override bool PodeAtacar(IAtacavel atacavel)
     {
-        return atacavel is InimigoAmarelo || atacavel is InimigoVerde;
+        return atacavel is InimigoAmarelo || atacavel is InimigoLaranja;
     }
 
     public override void Atacar()

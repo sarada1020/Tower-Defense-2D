@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InimigoVerde : InimigoBase
+public class InimigoLaranja : InimigoBase
 {
     protected override void ChegarNoFinalDoCaminho()
     {

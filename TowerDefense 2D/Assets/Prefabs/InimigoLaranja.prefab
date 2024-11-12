@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 9138237957175652939}
   - component: {fileID: 4229347153444772335}
   m_Layer: 0
-  m_Name: InimigoVerde
+  m_Name: InimigoLaranja
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 1
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.26240653, g: 0.5622641, b: 0.045617606, a: 1}
+  m_Color: {r: 0.82641506, g: 0.44779235, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -134,4 +134,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vida: 20
-  velocidade: 1
+  velocidade: 1.5
