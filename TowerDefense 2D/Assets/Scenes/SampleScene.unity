@@ -9909,9 +9909,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6267a5d5cd725fa4fa64362d630aaf04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  torreFracaPrefab: {fileID: 3430653692162155480, guid: 3d8bb248f6cdc764593a161a1fdfc3a8, type: 3}
-  torreMediaPrefab: {fileID: 3430653692162155480, guid: 148e819d6d5b2d648b46a163af109816, type: 3}
-  torreFortePrefab: {fileID: 3430653692162155480, guid: 8974d646d96687c4fbaeaba43fa64916, type: 3}
+  torreFracaPrefab: {fileID: 38381395962783028, guid: 4b3816cd8a41b454ba4009da1d65ec37, type: 3}
+  torreMediaPrefab: {fileID: 38381395962783028, guid: 97cd10ff851c3424fbb4a873dbaa86c1, type: 3}
+  torreFortePrefab: {fileID: 38381395962783028, guid: 00fd7e645ad13e54196d6735f6b9486e, type: 3}
 --- !u!4 &1171553386
 Transform:
   m_ObjectHideFlags: 0

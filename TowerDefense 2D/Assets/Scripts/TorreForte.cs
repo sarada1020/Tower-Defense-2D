@@ -7,9 +7,9 @@ public class TorreForte : TorreBase
     public GameObject prefabMunicao;
 
     protected override bool PodeAtacar(IAtacavel atacavel)
-    {
-        return atacavel is InimigoRoxo;
-    }
+{
+    return atacavel is InimigoRoxo;
+}
 
     public override void Atacar()
     {

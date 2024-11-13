@@ -17,6 +17,7 @@ public class TorreMedia: TorreBase
         {
             IAtacavel alvo = atacaveisNoAlcance[0];
             Disparar(alvo);
+            Debug.Log("Atirou");
         }
     }
 
